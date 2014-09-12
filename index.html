@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<!-- light table stuff -->
+    <script type='text/javascript' id='lt_ws' src='http://localhost:53849/socket.io/lighttable/ws.js'></script>
+<!-- end -->
+    <meta charset="utf-8">
+    <title>Shiva The Destructor</title>
+
+    <style>
+    * {
+        margin: 0; padding: 0;
+    }
+
+    .svg, .svg-left, .svg-right {
+        position: fixed;
+        overflow: hidden;
+    }
+    </style>
+  </head>
+
+  <body>
+     <div style="margin: 0;">
+     <object id="left" class="svg-left" data="bg_left.svg" type="image/svg+xml"></object>
+     <object id="center" class="svg" data="logo_bg.svg" type="image/svg+xml"></object>
+     <object id="right" class="svg-right" data="bg_left.svg" type="image/svg+xml"></object>
+     </div>
+
+     <script src="out/goog/base.js" type="text/javascript"></script>
+     <script src="shiva.js" type="text/javascript"></script>
+     <script type="text/javascript">goog.require("shiva.core");</script>
+
+     <script type="text/javascript">shiva.core.run(shiva.core.shiva_animation);</script>
+
+  </body>
+</html>
