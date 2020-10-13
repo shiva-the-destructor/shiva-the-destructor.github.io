@@ -13,12 +13,69 @@
         font-size: 72px;
       } 
       
+.zoom {
+  animation: pulsing 3s infinite;
+}
+
+
+@keyframes pulsing {
+  0% {
+    -webkit-transform: scale(0.5, 0.5);
+    transform: scale(0.5, 0.5)
+  }
+  50% {
+    -webkit-transform: scale(1.0, 1.0);
+    transform: scale(1.0, 1.0);
+  }
+  100% {
+    -webkit-transform: scale(0.5, 0.5);
+    transform: scale(0.5, 0.5);
+  }
+}
+
+.rotate {
+   animation: rotation 8s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+.slide {
+  animation: sliding 13s infinite;
+}
+
+@keyframes sliding {
+    0% {
+        transform: skewX(90deg);
+    }
+    10% {
+      transform: skewX(15deg);
+    }
+    98% {
+      transform: skewX(-15deg);
+    }
+    100% {
+        transform: skewX(-90deg);
+    }
+}
+
+
+
     </style>
   </head>
 
   <body>
-    <marquee>Shylo</marquee>
     
+    <img id='anim' class='zoom rotate slide' src="logo_embroidery.svg" style="min-width: 75%; height: auto; ">
+
+<!--     <marquee>Shylo</marquee>
+ -->    
     
     <script>
       // window.location.href = "//shivathedestructor.bandcamp.com";
