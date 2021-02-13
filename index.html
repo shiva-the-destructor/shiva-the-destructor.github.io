@@ -16,11 +16,12 @@
     <title>Shiva the Destructor</title>
 
     <style>
+
     * {
         margin: 0; padding: 0;
     }
       marquee {
-       width: 100vw;
+        width: 100vw;
         font-size: 72px;
       } 
       
@@ -77,16 +78,146 @@
 }
 
 
+.social-icons {
+    display: flex;
+    flex: 0 1 auto;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.social-icons {
+    list-style-type: none;
+}
+
+.social-icons .fab {
+    color: #000;
+}
+
+.social-icons .fab:hover {
+
+}
+
+    /* This parent can be any width and height */
+    .block {
+        text-align: center;
+
+        /* May want to do this if there is risk the container may be narrower than the element inside */
+        white-space: nowrap;
+    }
+
+    /* The ghost, nudged to maintain perfect centering */
+    .block:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+
+    }
+
+    /* The element to be centered, can also be of any width and height */
+    .centered {
+        display: inline-block;
+        vertical-align: middle;
+        width: 90vw;
+    }
+
+    .social-icons .fab {
+        font-size: 10vw;
+        padding: 1vw;
+
+        transition: color .5s ease;
+    }
+
+    .social-icons .fab:hover {
+        color: #FF0073;
+    }
+
+
+
+    /* Mobile first, we start from the smallest viewport width */
+
+    /* From 320px and up */
+    @media (min-width: 320px) {
+        body {
+            /*background-color: blue;*/
+        }
+    }
+
+    /* From 768px and up */
+    @media (min-width: 768px) {
+        body {
+            /*background-color: green;*/
+        }
+    }
+
+    /* From 1024px and up */
+    @media (min-width: 1024px) {
+        body {
+            /*background-color: yellow;*/
+        }
+    }
+
+    /* From 1224px and up */
+    @media (min-width: 1224px) {
+        body {
+            /*background-color: orange;*/
+        }
+    }
+
+    /* From 1824px and up */
+    @media (min-width: 1824px) {
+        body {
+            /*background-color: aqua;*/
+        }
+    }
+
+    /*  max-width query */
+    /* From 850px and up, until 950px  */
+    @media (min-width: 850px) and (max-width: 950px) {
+        body {
+            /*background-color: purple;*/
+        }
+    }
+
+    p {
+        font-size: 24pt;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        line-height: 1.5;
+        margin-bottom: 2.5vh;
+    }
 
     </style>
+
+
   </head>
 
   <body>
-    
-    <img id='anim' class='zoom rotate slide' src="logo_embroidery.svg" style="min-width: 75%; height: auto; ">
 
-<!--     <marquee>Shylo</marquee>
- -->    
+  <div class="block">
+
+      <div class="centered">
+          <img id='anim' class='zoom rotate slide' src="logo_embroidery.svg" >
+
+          <p style="text-align: center">
+              New album "Find the Others" coming out March 2021.
+          </p>
+
+
+          <ul class="social-icons">
+
+              <li><a href="https://shivathedestructor.bandcamp.com/" target="_blank"><i class="fab fa-bandcamp"></i></a></li>
+              <li><a href="https://www.instagram.com/shivathedestructor/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+              <li><a href="https://www.facebook.com/shivathedestructor/" target="_blank"><i class="fab fa-facebook"></i></a></li>
+              <li><a href="https://soundcloud.com/shiva-the-destructor" target="_blank"><i class="fab fa-soundcloud"></i></a></li>
+              <!-- robust? -->
+          </ul>
+
+
+      </div>
+
+  </div>
+
     
     <script>
       // window.location.href = "//shivathedestructor.bandcamp.com";
