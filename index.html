@@ -18,185 +18,209 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
    
-    <style>
+     <style>
 
-    * {
-        margin: 0; padding: 0;
-    }
-      marquee {
-        width: 100vw;
-        font-size: 72px;
-      } 
-      
-.zoom {
-  animation: pulsing 3s infinite;
-}
+          * {
+              margin: 0;
+              padding: 0;
+          }
 
+          marquee {
+              width: 100vw;
+              font-size: 72px;
+          }
 
-@keyframes pulsing {
-  0% {
-    -webkit-transform: scale(0.5, 0.5);
-    transform: scale(0.5, 0.5)
-  }
-  50% {
-    -webkit-transform: scale(1.0, 1.0);
-    transform: scale(1.0, 1.0);
-  }
-  100% {
-    -webkit-transform: scale(0.5, 0.5);
-    transform: scale(0.5, 0.5);
-  }
-}
-
-.rotate {
-   animation: rotation 8s infinite linear;
-}
-
-@keyframes rotation {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(359deg);
-    }
-}
-
-.slide {
-  animation: sliding 13s infinite;
-}
-
-@keyframes sliding {
-    0% {
-        transform: skewX(90deg);
-    }
-    10% {
-      transform: skewX(15deg);
-    }
-    98% {
-      transform: skewX(-15deg);
-    }
-    100% {
-        transform: skewX(-90deg);
-    }
-}
+          .zoom {
+              animation: pulsing 3s infinite;
+          }
 
 
-.social-icons {
-    display: flex;
-    flex: 0 1 auto;
-    align-items: center;
-    justify-content: center;
+          @keyframes pulsing {
+              0% {
+                  -webkit-transform: scale(0.5, 0.5);
+                  transform: scale(0.5, 0.5)
+              }
+              50% {
+                  -webkit-transform: scale(1.0, 1.0);
+                  transform: scale(1.0, 1.0);
+              }
+              100% {
+                  -webkit-transform: scale(0.5, 0.5);
+                  transform: scale(0.5, 0.5);
+              }
+          }
 
-}
+          .rotate {
+              animation: rotation 8s infinite linear;
+          }
 
-.social-icons {
-    list-style-type: none;
-}
+          @keyframes rotation {
+              from {
+                  transform: rotate(0deg);
+              }
+              to {
+                  transform: rotate(359deg);
+              }
+          }
 
-.social-icons .fab {
-    color: #000;
-}
+          .slide {
+              animation: sliding 13s infinite;
+          }
 
-.social-icons .fab:hover {
-
-}
-
-    /* This parent can be any width and height */
-    .block {
-        text-align: center;
-
-        /* May want to do this if there is risk the container may be narrower than the element inside */
-        white-space: nowrap;
-    }
-
-    /* The ghost, nudged to maintain perfect centering */
-    .block:before {
-        content: '';
-        display: inline-block;
-        height: 100%;
-        vertical-align: middle;
-
-    }
-
-    /* The element to be centered, can also be of any width and height */
-    .centered {
-        display: inline-block;
-        vertical-align: middle;
-        width: 90vw;
-    }
-
-    .social-icons .fab {
-        font-size: 10vw;
-        padding: 1vw;
-
-        transition: color .5s ease;
-    }
-
-    .social-icons .fab:hover {
-        color: #FF0073;
-    }
+          @keyframes sliding {
+              0% {
+                  transform: skewX(90deg);
+              }
+              10% {
+                  transform: skewX(15deg);
+              }
+              98% {
+                  transform: skewX(-15deg);
+              }
+              100% {
+                  transform: skewX(-90deg);
+              }
+          }
 
 
+          .social-icons {
+              display: flex;
+              flex: 0 1 auto;
+              align-items: center;
+              justify-content: center;
 
-    /* Mobile first, we start from the smallest viewport width */
+          }
 
-    /* From 320px and up */
-    @media (min-width: 320px) {
-        body {
-            /*background-color: blue;*/
-        }
-    }
+          .social-icons {
+              list-style-type: none;
+          }
 
-    /* From 768px and up */
-    @media (min-width: 768px) {
-        body {
-            /*background-color: green;*/
-        }
-    }
+          .social-icons .fab {
+              color: #000;
+          }
 
-    /* From 1024px and up */
-    @media (min-width: 1024px) {
-        body {
-            /*background-color: yellow;*/
-        }
-    }
+          .social-icons .fab:hover {
 
-    /* From 1224px and up */
-    @media (min-width: 1224px) {
-        body {
-            /*background-color: orange;*/
-        }
-    }
+          }
 
-    /* From 1824px and up */
-    @media (min-width: 1824px) {
-        body {
-            /*background-color: aqua;*/
-        }
-    }
+          /* This parent can be any width and height */
+          .block {
+              text-align: center;
 
-    /*  max-width query */
-    /* From 850px and up, until 950px  */
-    @media (min-width: 850px) and (max-width: 950px) {
-        body {
-            /*background-color: purple;*/
-        }
-    }
+              /* May want to do this if there is risk the container may be narrower than the element inside */
+              white-space: nowrap;
+          }
 
-    p {
-        font-size: 2.5vw;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-        line-height: 1.5;
-        margin-bottom: 2.5vh;
+          /* The ghost, nudged to maintain perfect centering */
+          .block:before {
+              content: '';
+              display: inline-block;
+              height: 100%;
+              vertical-align: middle;
 
-        max-width: 80vw;
-        word-wrap: break-spaces;
-        display: block;
+          }
 
-    }
+          /* The element to be centered, can also be of any width and height */
+          .centered {
+              display: inline-block;
+              vertical-align: middle;
+              width: 90vw;
+          }
 
-    </style>
+          .social-icons span {
+              padding: .5rem;
+              font-weight: bolder;
+          }
 
+          .social-icons a {
+              display: flex;
+              flex-direction: column;
+              text-decoration: none;
+
+              color: #ff0074;
+              font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+          }
+
+          .social-icons a:hover span {
+              text-decoration: underline;
+          }
+
+
+          .social-icons .fab {
+              font-size: 10vw;
+              padding: 1vw;
+
+              transition: color .5s ease;
+          }
+
+          .social-icons .fab:hover {
+              color: #ff0074;
+          }
+
+
+          /* Mobile first, we start from the smallest viewport width */
+
+          /* From 320px and up */
+          @media (min-width: 320px) {
+              body {
+                  /*background-color: blue;*/
+              }
+          }
+
+          /* From 768px and up */
+          @media (min-width: 768px) {
+              body {
+                  /*background-color: green;*/
+              }
+          }
+
+          /* From 1024px and up */
+          @media (min-width: 1024px) {
+              body {
+                  /*background-color: yellow;*/
+              }
+          }
+
+          /* From 1224px and up */
+          @media (min-width: 1224px) {
+              body {
+                  /*background-color: orange;*/
+              }
+          }
+
+          /* From 1824px and up */
+          @media (min-width: 1824px) {
+              body {
+                  /*background-color: aqua;*/
+              }
+          }
+
+          /*  max-width query */
+          /* From 850px and up, until 950px  */
+          @media (min-width: 850px) and (max-width: 950px) {
+              body {
+                  /*background-color: purple;*/
+              }
+          }
+
+          body {
+              background-color: #D1E8EA;
+          }
+
+          p {
+              font-size: 2.5vw;
+              font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+              line-height: 1.5;
+              margin-bottom: 2.5vh;
+
+              word-wrap: break-spaces;
+              display: block;
+
+
+              text-transform: uppercase;
+          }
+
+      </style>
 
   </head>
 
@@ -214,14 +238,16 @@
 
           <ul class="social-icons">
 
-              <li><a href="https://shivathedestructor.bandcamp.com/" target="_blank"><i class="fab fa-bandcamp"></i></a></li>
-              <li><a href="https://www.instagram.com/shivathedestructor/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-              <li><a href="https://www.facebook.com/shivathedestructor/" target="_blank"><i class="fab fa-facebook"></i></a></li>
-              <li><a href="https://soundcloud.com/shiva-the-destructor" target="_blank"><i class="fab fa-soundcloud"></i></a></li>
-              <!-- robust? -->
+              <li><a href="https://shivathedestructor.bandcamp.com/" target="_blank"><i class="fab fa-bandcamp"></i>
+                  <span>bandcamp</span></a></li>
+              <li><a href="https://www.instagram.com/shivathedestructor/" target="_blank"><i class="fab fa-instagram"></i>
+                  <span>instagram</span></a></li>
+              <li><a href="https://www.facebook.com/shivathedestructor/" target="_blank"><i class="fab fa-facebook"></i>
+                  <span>facebook</span></a></li>
+              <li><a href="https://soundcloud.com/shiva-the-destructor" target="_blank"><i class="fab fa-soundcloud"></i>
+                  <span>soundcloud</span></a></li>
+
           </ul>
-
-
       </div>
 
   </div>
